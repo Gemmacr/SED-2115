@@ -14,3 +14,21 @@ return (
 }
 
 export default App;
+
+function MyButton() {
+  return (
+    <button>
+      I'm a button
+    </button>
+  );
+}
+
+function MyApp() {
+  return (
+    <div>
+      <h1>View Music Chart Table</h1>
+      <MyButton />
+    </div>
+  );
+}
+
