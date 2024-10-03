@@ -16,14 +16,37 @@ img.height = 200; // Optional: set height
 // Append the image to a specific element in the document 
 document.body.appendChild(img); // This will add the image to the body 
 
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+    res.send('Hello, this is your backend!');
+});
+
+app.listen(port, () => {
+    console.log(`Server running on https://www.billboard.com/charts/billboard-global-200/${port}`);
+});
+
+const cors = require('cors');
+app.use(cors());
+
+
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'Here is your data!' });
+});
+
 const MyButton = () => {
   return (
-    <button>
-      View Music Chart Table
-    </button>
+    <div>
+      <a href="https://www.google.com/">
+       <button onClick={addNote}>
+          View Music Chart Table
+        </button>
+      </a>
+    </div>
   );
 }
-
 function App() {
     
   const [notes, setNotes] = useState()
@@ -42,7 +65,7 @@ function App() {
         <h1>
           200 BILLBOARDS CHART
         </h1>
-        <a href="https://www.billboard.com/charts/billboard-global-200/">link text</a>
+        <a href="https://www.billboard.com/charts/billboard-global-200/">Link to Billboard Music</a>
         <button onClick={addNote}>
       View Music Chart Table
     </button>
