@@ -1,25 +1,25 @@
-<html lang="eng">
-<head>
-
-
-
- <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>How to create a button with link</title>
-</head>
-<body>
-    <p>How to create button with link</p>
-
-<a href="http://localhost:3000/">Google</a>
-<button onclick="go to link(this)" value="window.location.href='http://localhost:3000/'">Google</button>
-
-
-
-
-
-
-   <script>
-        // Your JavaScript code can go here
-    </script>
-</body>
-</html>
+const App = () => {
+    const [ counter, setCounter ] = useState(0)
+    return (
+    <div>
+    <div>{counter}</div>
+    <button onClick={() =>
+    console.log('clicked')}> plus
+    </button>
+    </div>
+    )
+    }
+    const click = () => {
+    const [ counter, setCounter ] = useState(0)
+    const handleClick = () => {
+     console.log('clicked')
+    }
+    return (
+    <div>
+    <div>{counter}</div>
+    <button onClick={handleClick}>
+    View music Chart Table
+    </button>
+    </div>
+    )
+    }
